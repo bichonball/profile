@@ -13,8 +13,12 @@
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
         *{
-            background-color: rgb(255, 239, 213);
             font-family: "Pretendard",serif;
+        }
+
+        body{
+            background-image: url('back.png');
+            background-size: cover;
         }
 
         .profile{
@@ -40,7 +44,7 @@
         .main{
             color: rgb(40, 40, 40);
             font-size: 25px;
-            margin-top: 25px;
+            margin-top: 30px;
             margin-bottom: 0px;
         }
 
@@ -48,10 +52,10 @@
             color: rgb(40, 40, 40);
             font-size: 15px;
             margin-top: 0px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
-        .wrap{
+        #profile_box{
             width: 300px;
             margin: 30px auto 0px auto;
 
@@ -61,44 +65,172 @@
             align-items: center;
         }
 
+        .wrap{
+            margin: 20px auto 0px auto;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
         .wrap>a{
-            width: 300px;
-            height: 50px;
-            background-color: white;
-            border-radius: 8px;
+            border: 4px double rgb(214, 213, 255);
+            width: 250px;
+            height: 300px;
+            background-color: rgb(255 255 255 / 30%);
+            backdrop-filter: blur(3px);
+            border-radius: 20px;
             margin-bottom: 15px;
-            font-size: 15px;
+            margin-left: 10px;
+            font-size: 17px;
             font-weight: bold;
-            color: rgb(40, 40, 40);
+            color: rgb(20, 20,20);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            box-shadow: 2px 2px 2px 0px rgba(40, 40, 40, 0.186);
+            box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
             transition: all 0.3s;
+            overflow: hidden;
+            text-shadow:0px 0px 5px rgb(255, 255, 255);
         }
 
         .wrap>a:hover{
-            background-color: #f2f2f2;
-            font-size: 17px;
+            background-color: rgb(178, 177, 255);
+            color: white;
+            font-size: 19px;
             transition: all 0.3s;
+            text-shadow:0px 0px 5px rgb(132, 131, 226);
 
+        }
+
+        .wrap>a:nth-child(1){
+            background-image: linear-gradient( rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)),
+                                url('1.png');
+            background-position: center;
+            background-size: 140%;
+        }
+
+        .wrap>a:nth-child(1):hover{
+            background-image: linear-gradient( rgba(198, 197, 255, 0.9),rgba(178, 177, 255, 0.9)),
+                                url('1.png');
+            background-position: center;
+            background-size: 145%;
+        }
+
+        .wrap>a:nth-child(2){
+            background-image: linear-gradient( rgba(255, 255, 255, 0.85),rgba(255, 255, 255, 0.85)),
+                                url('2.png');
+            background-position: center;
+            background-size: 120%;
+        }
+
+        .wrap>a:nth-child(2):hover{
+            background-image: linear-gradient( rgba(198, 197, 255, 0.9),rgba(178, 177, 255, 0.9)),
+                                url('2.png');
+            background-position: center;
+            background-size: 125%;
+        }
+
+        .wrap>a:nth-child(3){
+            background-image: linear-gradient( rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)),
+                                url('3.png');
+            background-position: center;
+            background-size: 400%;
+        }
+
+        .wrap>a:nth-child(3):hover{
+            background-image: linear-gradient( rgba(198, 197, 255, 0.9),rgba(178, 177, 255, 0.9)),
+                                url('3.png');
+            background-position: center;
+            background-size: 415%;
+        }
+
+        .wrap>a:nth-child(4){
+            background-image: linear-gradient( rgba(255, 255, 255, 0.85),rgba(255, 255, 255, 0.85)),
+                                url('4.jpg');
+            background-position: center;
+            background-size: 180%;
+        }
+
+        .wrap>a:nth-child(4):hover{
+            background-image: linear-gradient( rgba(198, 197, 255, 0.9),rgba(178, 177, 255, 0.9)),
+                                url('4.jpg');
+            background-position: center;
+            background-size: 185%;
+        }
+
+        .wrap>a:nth-child(5){
+            background-image: linear-gradient( rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)),
+                                url('5.png');
+            background-position: 50% 70%;
+            background-size: 110%;
+        }
+
+        .wrap>a:nth-child(5):hover{
+            background-image: linear-gradient( rgba(198, 197, 255, 0.9),rgba(178, 177, 255, 0.9)),
+                                url('5.png');
+            background-position: 50% 70%;
+            background-size: 115%;
         }
 
         .commi{
             font-size: 12px;
             margin-top: 5px;
         }
+
+        @media ( max-width: 900px ){
+            .wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .wrap>a{
+            width: 300px;
+            height: 50px;
+            font-size: 16px;}
+
+            .wrap>a:nth-child(2){
+            background-position: 50% 62%;}
+            .wrap>a:nth-child(2):hover{
+            background-position: 50% 62%;}
+
+            .wrap>a:nth-child(3){
+            background-position: 50% 65%;
+            background-size: 200%;}
+            .wrap>a:nth-child(3):hover{
+            background-position: 50% 65%;
+            background-size: 210%;}
+
+            .wrap>a:nth-child(4){
+            background-position: 50% 40%;
+            background-size: 110%;}
+            .wrap>a:nth-child(4):hover{
+            background-position: 50% 40%;
+            background-size: 120%;}
+
+            .wrap>a:nth-child(5){
+            background-position: 50% 58%;
+            background-size: 100%;}
+            .wrap>a:nth-child(5):hover{
+            background-position: 50% 58%;
+            background-size: 105%;}
+        }
     </style>
 </head>
 <body>
-    <div class="wrap">
+    <div id="profile_box">
         <div class="profile"></div>
         <div class="commi">ⓒCHOICHANG8</div>
         <h1 class="main">🌊비숑🌊</h1>
         <p class="sub">@bichonballchon</p>
-        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1CINT5_LrKusdA1jyU98gpvoohk2QvH2Ts9BkmzDI7r4/edit?usp=sharing">프로필 및 성향</a>
+    </div>
+    <div class="wrap">
+        <a class="a1" target="_blank" href="https://docs.google.com/spreadsheets/d/1CINT5_LrKusdA1jyU98gpvoohk2QvH2Ts9BkmzDI7r4/edit?usp=sharing">프로필 및 성향</a>
         <a target="_blank" href="https://docs.google.com/spreadsheets/d/19qJWMlfbbeR2sGmeGLgRKynT58kWFkLICG_kMVD25Zo/edit?usp=sharing">TPRG 기록</a>
         <a target="_blank" href="https://trpg-calendar.com/5KmwIjoS13m09GQkqXpj">TPRG 캘린더(친구공개)</a>
         <a target="_blank" href="http://bichonball.ivyro.net/">개인 홈페이지</a>
